@@ -4,7 +4,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import Form from '@components/Form';
 import React from 'react';
-
+export const dynamic = 'force-dynamic'; // Disable static generation for this page
 const EditPrompt = () => {
     const router = useRouter();
     const searchParams = useSearchParams();
