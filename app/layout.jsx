@@ -2,6 +2,7 @@
 import '@styles/globals.css';
 import Nav from '@components/Nav';
 import Provider from '@components/Provider'
+import { Suspense } from 'react';
 export const metadata={
     title:"Promptopia",
     description:'Discover & Share Ai Prompts'
@@ -18,7 +19,9 @@ const RootLayout = ({children}) => {
             <main className="app">
                
                 <Nav/>
+                <Suspense>
                 {children}
+                </Suspense>
             
             </main>
             </Provider>
