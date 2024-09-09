@@ -6,7 +6,7 @@ export const GET= async (req,{params})=>{
     try{
         await connectToDB();
      
-        const prompt=await Prompt.findById(params.id).populate('creator')
+        const prompt=await Prompt.findById(params?._id).populate('creator')
         console.log(prompt)
        if(!prompt)
         return new Response("Prompt not Found",{status:404})
